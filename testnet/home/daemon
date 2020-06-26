@@ -1,0 +1,23 @@
+#!/bin/sh
+
+maker=maker
+N=1
+
+
+	sleep 10  
+  	while true
+	do
+
+		for i in `seq 1 $N`
+		do
+        		pid1=`pgrep $maker$i`
+        		if [ -z "$pid1" ]; then
+                		nohup /home/$maker$i/$maker$i >/dev/null 2>&1 &
+				echo "start /home/$maker$i/$maker$i"
+        		fi
+		done
+
+		sleep 10
+	done
+
+
