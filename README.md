@@ -13,11 +13,26 @@
 6. 如果需要停止程序，请先终止daemon程序，再kill掉对应的maker进程。同时需要手动在网页上操作撤单平仓等动作。
 
 二、简单说明：
+
 程序有2个，1个是maker主程序，一个是daemon守护程序。将该压缩包解压放到/home/目录下，运行daemon程序既可自动运行。默认配置了一个程序（买卖各一个档位），如果需要排多个档位，需要多开，可以编辑daemon中的数字，改成需要的个数。同时配置对应编号的config文件。注意，每个maker进程必须单独放在一个目录里，并且不能重名。
 
 三、关于功能和配置：
 
 stop用于开启或者停止，=1停止并待机，=0程序开始工作
+
+auto_upgrade=1，自动升级是否打开，=1有新版本会自动升级，=0不会自动升级
+
+professional=0
+
+，=0参数自动生成，只需要设置方向，风险等级，和仓位3个参数，其他都由系统自动生成。=1，参数完全由自己设置，有经验者可自己调整参数
+
+direction=3，方向设置，professional=0才生效，1,强烈看多，=2看多，=3平衡，=4看空，=5，强烈看空
+
+risk=3
+
+，风险等级设置，professional=0才生效，1,非常谨慎，2谨慎，3正常，4激进，5非常激进
+
+max_position=2000.0，最大持仓设置，professional=0才生效，有可能由于获取仓位慢了超过一点
 
 buy_enable，买使能，=1使能，=0，禁用。  对自动平仓不起作用
 
@@ -102,6 +117,13 @@ wdg_time=60，各线程死机看门狗时间，单位秒
 
 ws_wdg_time=60 wss行情数据不更新看门狗时间，单位秒
 
+night_rate=1.0 夜间模式下单比例
+
+night_start=1，夜间模式起始时间
+
+night_end=9
+
+，夜间模式截止时间
 
 
 给出计算公式，
@@ -117,6 +139,16 @@ ws_wdg_time=60 wss行情数据不更新看门狗时间，单位秒
 
 [BASE]
 
+auto_upgrade=1
+
+professional=0
+
+direction=3
+
+risk=3
+
+max_position=2000.0
+
 stop=0
 
 buy_enable=1
@@ -125,59 +157,59 @@ sell_enable=1
 
 symbol=btcusd_p
 
-usr_id=FC_oCXXXXXXSc
+usr_id=xx
 
-password=123421
+password=xx
 
-api_key=0c055216d6bb4338bcc0a5bf
+api_key=xxx
 
-api_secret=a5b91b9b3e86478f9788256c
+api_secret=xx
 
 ###################################
 
 maker_enable=1
 
-maker_buy_quantity=111.0000
+maker_buy_quantity=3333.0000
 
-maker_sell_quantity=111.0000
+maker_sell_quantity=3333.0000
 
-maker_offset=0.5000
+maker_offset=0.00
 
 maker_range=0.1100
 
-maker_buy_C=-0.0100
+maker_buy_C=-0.0249
 
-maker_sell_C=-0.0100
+maker_sell_C=-0.0249
 
 maker_S=0.0500
 
-maker_max_stop=800.0000
+maker_max_stop=3333.0000
 
 ###################################
 
 taker_enable=1
 
-taker_buy_quantity=111.0000
+taker_buy_quantity=2222.0000
 
-taker_sell_quantity=111.0000
+taker_sell_quantity=2222.0000
 
-taker_buy_T1=0.0600
+taker_buy_T1=0.045
 
-taker_sell_T1=0.0600
+taker_sell_T1=0.045
 
-taker_buy_T2=0.0250
+taker_buy_T2=0.0154
 
-taker_sell_T2=0.0250
+taker_sell_T2=0.0154
 
-taker_price=4
+taker_price=10
 
 taker_sleep=1000
 
 ###################################
 
-autoclose_enable=1
+autoclose_enable=0
 
-autoclose_max=850.0000
+autoclose_max=1950.0000
 
 autoclose_time=1800
 
@@ -197,9 +229,9 @@ miner_quantity=1.00
 
 ###################################
 
-cancel_time=3600
+cancel_time=3601
 
-gap=20.0000
+gap=10.0000
 
 filled_sleep=5000
 
@@ -216,6 +248,15 @@ time_out=25
 wdg_time=60
 
 ws_wdg_time=60
+
+night_rate=1.0
+
+night_start=1
+
+night_end=9
+
+
+
 
 
 
