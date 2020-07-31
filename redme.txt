@@ -19,7 +19,7 @@ stopÓÃÓÚ¿ªÆô»òÕßÍ£Ö¹£¬=1Í£Ö¹²¢´ý»ú£¬=0³ÌÐò¿ªÊ¼¹¤×÷
 auto_upgrade=1£¬×Ô¶¯Éý¼¶ÊÇ·ñ´ò¿ª£¬=1ÓÐÐÂ°æ±¾»á×Ô¶¯Éý¼¶£¬=0²»»á×Ô¶¯Éý¼¶ £¨×¢Òâ£º¿ªÆô×Ô¶¯Éý¼¶¹¦ÄÜ£¬³ÌÐòÖ»ÄÜ·ÅÔÚ/home/maker1/Ä¿Â¼ÏÂ£¬maker2, maker3½«²»ÄÜÊ¹ÓÃ£©
 professional=0
 £¬=0²ÎÊý×Ô¶¯Éú³É£¬Ö»ÐèÒªÉèÖÃ·½Ïò£¬·çÏÕµÈ¼¶£¬ºÍ²ÖÎ»3¸ö²ÎÊý£¬ÆäËû¶¼ÓÉÏµÍ³×Ô¶¯Éú³É£¬¿ÉÒÔÉèÖÃÖ¹Ó¯Ö¹Ëð¡£=1£¬²ÎÊýÍêÈ«ÓÉ×Ô¼ºÉèÖÃ£¬ÓÐ¾­ÑéÕß¿É×Ô¼ºµ÷Õû²ÎÊý
-direction=3£¬·½ÏòÉèÖÃ£¬1,Ç¿ÁÒ¿´¶à£¬=2¿´¶à£¬=3Æ½ºâ£¬=4¿´¿Õ£¬=5£¬Ç¿ÁÒ¿´¿Õ£¨¸Ã²ÎÊýÖ»ÓÐµ±professional=0Ê±²ÅÉúÐ§£©
+direction=3£¬·½ÏòÉèÖÃ£¬1,Ç¿ÁÒ¿´¶à£¬=2¿´¶à£¬=3Æ½ºâ£¬=4¿´¿Õ£¬=5£¬Ç¿ÁÒ¿´¿Õ  =6£¬·½ÏòÓÉMACDÖÇÄÜÅÐ¶Ï £¨¸Ã²ÎÊýÖ»ÓÐµ±professional=0Ê±²ÅÉúÐ§£©
 risk=3
 £¬·çÏÕµÈ¼¶ÉèÖÃ£¬1,·Ç³£½÷É÷£¬2½÷É÷£¬3Õý³££¬4¼¤½ø£¬5·Ç³£¼¤½ø £¨¸Ã²ÎÊýÖ»ÓÐµ±professional=0Ê±²ÅÉúÐ§£©
 max_position=2000.0£¬×î´ó³Ö²ÖÉèÖÃ£¬ºÜÓÐ¿ÉÄÜÓÉÓÚ»ñÈ¡²ÖÎ»ÂýÁË³¬¹ýÒ»µã £¨¸Ã²ÎÊýÖ»ÓÐµ±professional=0Ê±²ÅÉúÐ§£©
@@ -30,20 +30,21 @@ password£¬Ê¹ÓÃ¸ÃÈí¼þµÄÃÜÂë£¬ÓÃÓÚÊÚÈ¨Ê¹ÓÃ¸ÃÈí¼þµÄ£¬²»ÊÇfmexµÄÃÜÂë£¬Í¬Ê±½¨Òé²»ÒªÓÃ
 api_key, ½öÌîÇ°Ãæ24Î»£¬±£Ö¤°²È«¡£ºóÃæ8Î»·¢¸øÎÒ
 api_secret, APIÃØÔ¿£¬½öÌîÇ°Ãæ24Î»£¬±£Ö¤°²È«¡£ºóÃæ8Î»·¢¸øÎÒ
 
-huntdown_enable£¬ =1¿ªÆô×·ÕÇÉ±µø¹¦ÄÜ£¬=0£¬½ûÓÃ×·ÕÇÉ±µø¹¦ÄÜ£¬ÊÊºÏµ¥±ßÐÐÇéºÍ±©ÕÇ±©µøÐÐÇé¡£×¢Òâ¸Ã¹¦ÄÜ»áÓëÖ¹Ó¯Ö¹Ëð¹¦ÄÜ³åÍ»£¬¿ªÆôËüÇë½ûÓÃÖ¹Ó¯Ö¹¹¦ÄÜ
+huntdown_enable£¬ =1¿ªÆô×·ÕÇÉ±µø¹¦ÄÜ£¬=0£¬½ûÓÃ×·ÕÇÉ±µø¹¦ÄÜ£¬ÊÊºÏµ¥±ßÐÐÇéºÍ±©ÕÇ±©µøÐÐÇé¡£×¢Òâ¸Ã¹¦ÄÜ»áÓëÖ¹Ó¯Ö¹Ëð¹¦ÄÜ³åÍ»£¬¿ªÆôËüÇë½ûÓÃÖ¹Ó¯Ö¹¹¦ÄÜ£¬MACDÖÇÄÜÅÐ¶Ï½¨Òé½ûÓÃÕâ¸ö¹¦ÄÜ
 
-stop_lost_enable£¬ =1¿ªÆôÖ¹Ëð¹¦ÄÜ£¬=0£¬½ûÓÃÖ¹Ëð¹¦ÄÜ £¨×¢Òâ£¬¸Ã²ÎÊýµÄ¸Ä±äÐèÒªÖØÆô³ÌÐò£¬¸Ã¹¦ÄÜÓë×·ÕÇÉ±µø¹¦ÄÜ³åÍ»£¬ÈôÒªÆôÓÃËü£¬ÇëÏÈ½ûÓÃ×·ÕÇÉ±µø¹¦ÄÜ)
+stop_lost_enable£¬ =1¿ªÆôÖ¹Ëð¹¦ÄÜ£¬=0£¬½ûÓÃÖ¹Ëð¹¦ÄÜ £¨×¢Òâ£¬¸Ã²ÎÊýµÄ¸Ä±äÐèÒªÖØÆô³ÌÐò£¬¸Ã¹¦ÄÜÓë×·ÕÇÉ±µø¹¦ÄÜ³åÍ»£¬ÈôÒªÆôÓÃËü£¬ÇëÏÈ½ûÓÃ×·ÕÇÉ±µø¹¦ÄÜ£¬MACDÖÇÄÜÅÐ¶Ï½¨Òé½ûÓÃÕâ¸ö¹¦ÄÜ)
 stop_lost_value=1.0, ³Ö²Ö¼ÛÓëµ±Ç°¼Û¸ñµÄ×î´ó¼Û²î°Ù·Ö±È£¬±ÈÈçÉèÖÃ1.0£¬³ÖÓÐ¿Õµ¥¾ù¼Û10000£¬µ±Ç°¼Û9900£¬Ïà²îÁË1%£¬¾Í»á´¥·¢Ö¹Ëð¡£´ó¼ÒÐèÒª¸ù¾Ý¸÷×ÔµÄ¸Ü¸ËÂÊÀ´ÉèÖÃÕâ¸öÖµ
 stop_lost_sleep=900£¬Ö¹ËðºóµÄÍ£»úÊ±¼ä£¬µ¥Î»Ãë
 stop_lost_reverse=100.0£¬Ö¹ËðºóµÄ·´Ïò²Ù×÷ÊýÁ¿,µ¥Î»(ÕÅ)£¬±ÈÈç9900´¥·¢¿Õµ¥Ö¹Ëð£¬½«¼ÌÐøÏÂNÕÅ¶àµ¥£¬¿ÉÒÔÎª0£¬¾Í±íÊ¾²»·´Ïò²Ù×÷
 
-stop_profit_enable, 	=1¿ªÆôÖ¹Ó¯¹¦ÄÜ£¬=0£¬½ûÓÃÖ¹Ó¯¹¦ÄÜ £¨×¢Òâ£¬¸Ã²ÎÊýµÄ¸Ä±äÐèÒªÖØÆô³ÌÐò£¬¸Ã¹¦ÄÜÓë×·ÕÇÉ±µø¹¦ÄÜ³åÍ»£¬ÈôÒªÆôÓÃËü£¬ÇëÏÈ½ûÓÃ×·ÕÇÉ±µø¹¦ÄÜ)
+stop_profit_enable, 	=1¿ªÆôÖ¹Ó¯¹¦ÄÜ£¬=0£¬½ûÓÃÖ¹Ó¯¹¦ÄÜ £¨×¢Òâ£¬¸Ã²ÎÊýµÄ¸Ä±äÐèÒªÖØÆô³ÌÐò£¬¸Ã¹¦ÄÜÓë×·ÕÇÉ±µø¹¦ÄÜ³åÍ»£¬ÈôÒªÆôÓÃËü£¬ÇëÏÈ½ûÓÃ×·ÕÇÉ±µø¹¦ÄÜ£¬MACDÖÇÄÜÅÐ¶Ï½¨Òé½ûÓÃÕâ¸ö¹¦ÄÜ)
 stop_profit_value=0.5,  ³Ö²Ö¼ÛÓëµ±Ç°¼Û¸ñµÄ×î´ó¼Û²î°Ù·Ö±È£¬±ÈÈçÉèÖÃ0.5£¬³ÖÓÐ¿Õµ¥¾ù¼Û10000£¬µ±Ç°¼Û9950,Ïà²îÁË0.5%£¬¾Í»á´¥·¢Ö¹Ó¯¡£´ó¼ÒÐèÒª¸ù¾Ý¸÷×ÔµÄ¸Ü¸ËÂÊÀ´ÉèÖÃÕâ¸öÖµ
 stop_profit_sleep=900,  Ö¹Ó¯ºóµÄÍ£»úÊ±¼ä£¬µ¥Î»Ãë
 stop_profit_reverse=100.0£¬Ö¹Ó¯ºóµÄ·´Ïò²Ù×÷ÊýÁ¿,µ¥Î»(ÕÅ)£¬±ÈÈç9360´¥·¢¿Õµ¥Ö¹Ó¯£¬½«¼ÌÐøÏÂNÕÅ¶àµ¥£¬¿ÉÒÔÎª0£¬¾Í±íÊ¾²»·´Ïò²Ù×÷
+
 -----------------------------------------------------------------------------
 ÏÂÃæÕâÐ©²ÎÊýÈôprofessional=0
-£¬¾Í²»ÒªÈ¥¸ÄÁË
+£¬¾Í²»ÒªÈ¥¸ÄÁË(macdÏà¹Ø²ÎÊý³ýÍâ)
 -----------------------------------------------------------------------------
 maker_buy_quantity£¬µ¥´Î¹ÒÂòµ¥ÊýÁ¿
 maker_sell_quantity£¬µ¥´Î¹ÒÂôµ¥ÊýÁ¿
@@ -80,7 +81,13 @@ filled_sleep=5000, Èç¹ûµ¥×Ó±»³É½»£¬µ½ÏÂÒ»¸ö¹Òµ¥µÄÑÓ³ÙÊ±¼ä£¬µ¥Î»ºÁÃë£¬·ÀÖ¹ÐÐÇéÊý¾
 gap=20£¬ÔÊÐíÆ«ÀëÆäËû½»Ò×ËùµÄ×î´ó²îÖµ¡£·ÀÖ¹Éî¶ÈÌ«²î£¬¹Ò³öÌì¼ÛÂòµ¥ºÍÌì¼ÛÂôµ¥µ¼ÖÂ´óÁ¿¿÷Ëð£¬Ö»¶Ô¹Òµ¥ÓÐÐ§£¬³Ôµ¥²»ÊÜÕâ¸öÏÞÖÆ
 
 
-[ADVANCED]ÀïµÄ½¨Òé²»µ÷Õû
+[ADVANCED]
+×¢Òâ£ºMACDÏà¹Ø²ÎÊý£¬Ö»ÓÐµ±professional=0
+ÇÒdirection=6²ÅÉúÐ§
+macd_period=1day KÏßÖÜÆÚÑ¡Ôñ,ÓÐÕâÐ©Ñ¡Ïî,1min, 5min, 15min, 30min, 60min, 4hour, 1day, 1mon, 1week, 1year
+macd_fastlen=12	¿ìÏß
+macd_slowlen=26	ÂýÏß
+macd_signallen=9	ÐÅºÅ³¤¶È
 min_quantity=1.0000 ×îÐ¡ÏÂµ¥ÊýÁ¿
 dt=9000£¬ÐÐÇéÊý¾ÝÓëµ±Ç°ÏµÍ³Ê±¼äµÄ×î´ó²îÖµ£¬µ¥Î»ºÁÃë
 time_out=25£¬ÏÂµ¥³¬Ê±Ê±¼ä£¬µ¥Î»Ãë
@@ -106,7 +113,7 @@ night_end=9
 [BASE]
 auto_upgrade=1
 professional=0
-direction=3
+direction=6
 risk=3
 max_position=6000.0
 stop=0
@@ -164,6 +171,11 @@ gap=10.0000
 filled_sleep=5000
 ###################################
 [ADVANCED]
+macd_period=1day
+#1min, 5min, 15min, 30min, 60min, 4hour, 1day, 1mon, 1week, 1year
+macd_fastlen=12
+macd_slowlen=26
+macd_signallen=9
 min_quantity=1.0000
 dt=9000
 time_out=25
