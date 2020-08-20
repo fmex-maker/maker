@@ -26,7 +26,7 @@ auto_upgrade=1，自动升级是否打开，=1有新版本会自动升级，=0�
 professional=0
 ，=0参数自动生成，只需要设置方向，风险等级，和仓位3个参数，其他都由系统自动生成，可以设置止盈止损。=1，参数完全由自己设置，有经验者可自己调整参数
 
-direction=3，方向设置，1,强烈看多，=2看多，=3平衡，=4看空，=5，强烈看空  =6，方向由MACD智能判断 （该参数只有当professional=0时才生效）
+direction=3，方向设置，1,强烈看多，=2看多，=3平衡，=4看空，=5，强烈看空  =6，方向由MACD智能判断，=7，价格高于high做空，低于low做多，中间平衡，=8， 价格高于high做多，低于low做空，中间平衡 （该参数只有当professional=0时才生效）
 
 risk=3
 ，风险等级设置，1,非常谨慎，2谨慎，3正常，4激进，5非常激进 （该参数只有当professional=0时才生效）
@@ -129,6 +129,10 @@ gap=20，允许偏离其他交易所的最大差值。防止深度太差，挂�
 
 [ADVANCED]
 
+high=20000.00，价格区间顶部，只有当professional=0且direction=7或者8才生效
+
+low=3000.00，价格区间底部，只有当professional=0且direction=7或者8才生效
+
 注意：MACD相关参数，只有当professional=0
 
 且direction=6才生效
@@ -177,7 +181,7 @@ auto_upgrade=1
 
 professional=0
 
-direction=6
+direction=7
 
 risk=3
 
@@ -201,7 +205,7 @@ api_secret=xx
 
 ###################################
 
-huntdown_enable=0
+huntdown_enable=1
 
 stop_lost_enable=0
 
@@ -292,7 +296,11 @@ filled_sleep=5000
 
 [ADVANCED]
 
-macd_period=1day
+high=20000.00
+
+low=3000.00
+
+macd_period=5min
 
 #1min, 5min, 15min, 30min, 60min, 4hour, 1day, 1mon, 1week, 1year
 
