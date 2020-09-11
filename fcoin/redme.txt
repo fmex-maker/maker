@@ -44,7 +44,7 @@ taker_buy_T1=0.1500, Âò³Ôµ¥ÁéÃô¶ÈÏµÊı1£¬´¥·¢³Ôµ¥Ìõ¼ş1ÏµÊı£¬×ÔÓÉµ÷Õû£¬µ÷´óµã¾Í²»È
 taker_sell_T1=0.1500, Âô³Ôµ¥ÁéÃô¶ÈÏµÊı1£¬´¥·¢³Ôµ¥Ìõ¼ş1ÏµÊı£¬×ÔÓÉµ÷Õû£¬µ÷´óµã¾Í²»ÈİÒ×³Ô£¬µ÷Ğ¡µã¾Í¾­³£³Ôµ¥
 taker_buy_T2=0.0750, Âò³Ôµ¥ÁéÃô¶ÈÏµÊı2£¬´¥·¢³Ôµ¥Ìõ¼ş2ÏµÊı£¬×ÔÓÉµ÷Õû£¬µ÷´óµã¾Í²»ÈİÒ×³Ô£¬µ÷Ğ¡µã¾Í¾­³£³Ôµ¥£¬ÍÆ¼öT2=0.5T1£¬µ±È»£¬Ò²²»ÊÇ¾ø¶Ô£¬¿ÉÒÔ¸ù¾İÊµ¼ÊÇé¿öµ÷Õû
 taker_sell_T2=0.0750, Âô³Ôµ¥ÁéÃô¶ÈÏµÊı2£¬´¥·¢³Ôµ¥Ìõ¼ş2ÏµÊı£¬×ÔÓÉµ÷Õû£¬µ÷´óµã¾Í²»ÈİÒ×³Ô£¬µ÷Ğ¡µã¾Í¾­³£³Ôµ¥£¬ÍÆ¼öT2=0.5T1£¬µ±È»£¬Ò²²»ÊÇ¾ø¶Ô£¬¿ÉÒÔ¸ù¾İÊµ¼ÊÇé¿öµ÷Õû
-taker_price=4£¬³Ôµ¥µµÎ»£¬Âò³Ôµ¥¼Û=Âô1¼Û+0.1¡Átaker_price£¬ Âô³Ôµ¥¼Û=Âò1¼Û-0.1¡Átaker_price
+taker_price=4£¬³Ôµ¥µµÎ»£¬btcÂò³Ôµ¥¼Û=Âô1¼Û+0.1¡Átaker_price£¬ Âô³Ôµ¥¼Û=Âò1¼Û-0.1¡Átaker_price,   ethÂò³Ôµ¥¼Û=Âô1¼Û+0.01¡Átaker_price£¬ Âô³Ôµ¥¼Û=Âò1¼Û-0.01¡Átaker_price
 taker_sleep=1000£¬³Ôµ¥Íê³ÉºóµÄÑÓÊ±£¬µ¥Î»ºÁÃë£¬·ÀÖ¹³Ôµ¥¹ı¿ì¹ı¶à¡£
 
 miner_enable=0£¬½»Ò×ÍÚ¿óÊÇ·ñ¿ªÆô£¬×¢Òâ¿ªÆô×¢¶¨ÓĞ¿óËğ£¬ÇëÉ÷ÖØ£¬¾ºÕù²»´óÊ±ºò¿ÉÒÔË¢0.005ÊÔÊÔ¡£
@@ -72,7 +72,8 @@ ws_wdg_time=60 wssĞĞÇéÊı¾İ²»¸üĞÂ¿´ÃÅ¹·Ê±¼ä£¬µ¥Î»Ãë
 profix=(x-m)*p+y-n
 
 ----------------------------------------------------------------------------------
-Ò»¸ö²Î¿¼ÅäÖÃ
+btc²Î¿¼ÅäÖÃ
+
 
 [BASE]
 auto_upgrade=0
@@ -122,4 +123,52 @@ wdg_time=60
 ws_wdg_time=60
 
 
+------------------------------------------------
+eth²Î¿¼ÅäÖÃ
+[BASE]
+auto_upgrade=0
+professional=1
+stop=0
+buy_enable=1
+sell_enable=1
+symbol=ethusdt
+usr_id=xx
+password=xx
+api_key=xx
+api_secret=xx
+###################################
+maker_enable=1
+maker_buy_quantity=0.550
+maker_sell_quantity=0.550
+maker_offset=0.00
+maker_buy_C=-0.0500
+maker_sell_C=-0.0500
+maker_S=0.0500
+maker_btc_max_stop=1.100
+maker_usdt_max_stop=500.0000
+###################################
+taker_enable=1
+taker_buy_quantity=0.250
+taker_sell_quantity=0.250
+taker_buy_T1=0.170
+taker_sell_T1=0.170
+taker_buy_T2=0.0950
+taker_sell_T2=0.0950
+taker_price=40
+taker_sleep=1000
+miner_enable=1
+miner_mode=0
+miner_time=59
+miner_quantity=0.10
+###################################
+cancel_time=3600
+gap=30.0000
+filled_sleep=5000
+###################################
+[ADVANCED]
+min_quantity=0.050
+dt=19000
+time_out=25
+wdg_time=60
+ws_wdg_time=60
 
