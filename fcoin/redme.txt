@@ -30,11 +30,11 @@ api_secret, API秘钥，仅填前面24位，保证安全。后面8位发给我
 
 maker_buy_quantity，单次挂买单数量
 maker_sell_quantity，单次挂卖单数量
-maker_offset, 偏移量，每个程序配置的不一样，这样就不会挤在一起去。btc的话是0.1一个档位，eth是0.01一个档。0.0固定挂1档，0.1固定挂2档，0.2固定挂3档，以此类推
+maker_offset, 偏移量，每个程序配置的不一样，这样就不会挤在一起去。btc的话是0.1一个档位，eth是0.01一个档。0.0固定挂1档，0.1固定挂2档，0.2固定挂3档，以此类推，trx是0.00001一个档
 maker_buy_C=-0.0300，买安全系数，建议以-0.03为基础，0.01为步进这样微调。前期竞争小可以为负值，后期视情况改为正值
 maker_sell_C=-0.0300，卖安全系数，建议以-0.03为基础，0.01为步进这样微调。前期竞争小可以为负值，后期视情况改为正值
 maker_S=0.5000，5分钟振幅系数，假设5分钟波动20美元，0.5的话就是10美元
-maker_btc_max_stop=0.1000，超过这个持仓，不再下买单。（兼容之前的名字都用的btc，但eth就填eth的数量）获取交易账户的余额，加钱需要更改这个值。只能大概，有可能由于获取资金慢了，导致超过这个阈值。也可能刹车不及时有点点超过
+maker_btc_max_stop=0.1000，超过这个持仓，不再下买单。（兼容之前的名字都用的btc，但eth就填eth的数量，trx就填trx的数量）获取交易账户的余额，加钱需要更改这个值。只能大概，有可能由于获取资金慢了，导致超过这个阈值。也可能刹车不及时有点点超过
 maker_usdt_max_stop=1000.0，超过这个持仓，不再下卖单，获取交易账户的余额，加钱需要更改这个值。只能大概，有可能由于获取资金慢了，导致超过这个阈值。也可能刹车不及时有点点超过
 
 taker_enable=1，吃单使能，=1使能，=0，禁用。
@@ -171,4 +171,54 @@ dt=19000
 time_out=25
 wdg_time=60
 ws_wdg_time=60
+
+------------------------------------------------
+trx参考配置
+[BASE]
+auto_upgrade=0
+professional=1
+stop=0
+buy_enable=1
+sell_enable=1
+symbol=trxusdt
+usr_id=xx
+password=xx
+api_key=xx
+api_secret=xx
+###################################
+maker_enable=1
+maker_buy_quantity=10000.00
+maker_sell_quantity=10000.00
+maker_offset=0.00001
+maker_buy_C=-0.0500
+maker_sell_C=-0.0500
+maker_S=0.0500
+maker_btc_max_stop=50000.00
+maker_usdt_max_stop=3000.0000
+###################################
+taker_enable=1
+taker_buy_quantity=5000.00
+taker_sell_quantity=5000.00
+taker_buy_T1=0.170
+taker_sell_T1=0.170
+taker_buy_T2=0.0950
+taker_sell_T2=0.0950
+taker_price=40
+taker_sleep=1000
+miner_enable=0
+miner_mode=0
+miner_time=59
+miner_quantity=200.00
+###################################
+cancel_time=3600
+gap=30.0000
+filled_sleep=5000
+###################################
+[ADVANCED]
+min_quantity=200.00
+dt=19000
+time_out=25
+wdg_time=60
+ws_wdg_time=60
+
 
