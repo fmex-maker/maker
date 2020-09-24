@@ -211,7 +211,7 @@ miner_time=59
 miner_quantity=200.00
 ###################################
 cancel_time=3600
-gap=30.0000
+gap=0.0002
 filled_sleep=5000
 ###################################
 [ADVANCED]
