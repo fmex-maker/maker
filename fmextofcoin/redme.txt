@@ -54,6 +54,4 @@ dt=9000
 wdg_time=60
 ws_wdg_time=60
 
-night_end=9
-
 
