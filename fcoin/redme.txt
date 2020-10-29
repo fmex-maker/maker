@@ -28,6 +28,7 @@ api_key, 仅填前面24位，保证安全。后面8位发给我
 api_secret, API秘钥，仅填前面24位，保证安全。后面8位发给我
 
 
+margin_enable=1，=1使用杠杆交易，=0，不使用杠杆交易
 maker_buy_quantity，单次挂买单数量
 maker_sell_quantity，单次挂卖单数量
 maker_offset, 偏移量，每个程序配置的不一样，这样就不会挤在一起去。btc的话是0.1一个档位，eth是0.01一个档。0.0固定挂1档，0.1固定挂2档，0.2固定挂3档，以此类推，trx是0.00001一个档
@@ -48,7 +49,7 @@ taker_price=4，吃单档位，btc买吃单价=卖1价+0.1×taker_price， 卖吃单价=买1价-0.1
 taker_sleep=1000，吃单完成后的延时，单位毫秒，防止吃单过快过多。
 
 miner_enable=0，交易挖矿是否开启，注意开启注定有矿损，请慎重，竞争不大时候可以刷0.005试试。
-miner_mode=0，交易挖矿的挖矿模式，0-智能判断，1-只做多，2，只做空，3，多空循环交替， 4,对敲模式，如不能对敲会挂1个单，方向也是智能判断的
+miner_mode=0，交易挖矿的挖矿模式，0-智能判断，1-只做多，2，只做空，3，多空循环交替
 miner_time=59，刷单时间，单位秒，默认1分钟刷一次
 miner_quantity=0.005，一次刷单量，建议少量，因为基本上是要亏手续费的
 
@@ -81,6 +82,7 @@ professional=1
 stop=0
 buy_enable=1
 sell_enable=1
+margin_enable=0
 symbol=btcusdt
 usr_id=xx
 password=xx
@@ -211,7 +213,7 @@ miner_time=59
 miner_quantity=200.00
 ###################################
 cancel_time=3600
-gap=0.0002
+gap=30.0000
 filled_sleep=5000
 ###################################
 [ADVANCED]
